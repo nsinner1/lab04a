@@ -1,36 +1,38 @@
 body {
-    width:480px;
+    height: 100%
+}
+
+main {
+    height: 100%;
     display: grid;
+    grid-template-columns: 240px 240px;
+    grid-template-rows: 75px 150px 125px 125px 250px 250px 80px;
     text-align: center;
 }
 
 header {
-    height: 75px;
-    line-height: 75px;
+    grid-column-start: 1;
+    grid-column-end: span 2;
 }
 
 aside {
-    display: grid;
-    height: 150px;
-    line-height: 150px;
+    grid-column-start: span 2;
+    grid-row-end: span 1;
 }
 
 .two {
-    display: grid;
-    line-height: 125px;
-    grid-template-rows: 125px 125px;
+    grid-column-start: span 2;
+    grid-row-end: span 1;
 }
 
 .four {
-    display: grid;
-    line-height: 250px;
-    grid-template-rows: 250px 250px;
-    grid-template-columns: 240px 240px;
+    grid-column-start: span 1;
+    grid-row-end: span 1;
 }
 
 footer {
-    height: 80px;
-    line-height: 80px;
+    grid-column-start: span 2;
+    grid-row-end: span 1;
 }
 
  
@@ -39,51 +41,37 @@ footer {
     
     body {
         height: 100%;
-        display: grid;
     }
 
     main {
+        height: 100%;
         display: grid;
-        grid-column-start: 1;
-        grid-column-end: 5;
+        grid-template-columns: 200px 190px 190px 190px 190px;
+        grid-template-rows: 100px 200px 250px 150px;
     }
 
-    header, footer {
-        display: grid;
-        /* grid-column-start: 1;
-        grid-column-end: 5; */
-        grid-template-columns: 960px;
-        grid-template-rows: 100px;
+    header {
+        grid-column-start: 1;
+        grid-column-end: span 5;
     }
 
     aside {
-        display: grid;
-        grid-template-columns: 200px;
-        grid-template-rows: 600px;
+        grid-column-start: 1;
+        grid-row-end: span 3;
     }
   
     .two {
-        display: grid;
-        grid-template-columns: 380px 380px;
-        grid-template-rows: 200px;
-      /* float: left;
-      height: 200px;
-      /* line-height: 200px; */
-      width: 380px;     */
+        grid-column-start: span 2;
+        grid-row-end: span 1;
     }
   
     .four {
-        display: grid;
-        grid-template-columns: 190px 190px 190px 190px;
-        grid-template-rows: 250px;
-      /* float: left;
-      width: 190px; */
+        grid-column-start: span 1;
+        grid-row-end: span 1;
     }
-  
-    /* footer { */
-        /* grid-column-start: 1; */
-        /* grid-column-end: span 3; */
-        /* height: 100px;
-        line-height: 150px; */
-    /* } */
+
+    footer {
+        grid-column-start: span 4;
+        grid-row-end: span 1;
+    }
   }
